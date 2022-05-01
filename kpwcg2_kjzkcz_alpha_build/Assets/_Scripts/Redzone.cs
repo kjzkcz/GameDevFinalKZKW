@@ -26,10 +26,13 @@ public class Redzone : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Bee IN");
-        Main.S.numLives -= 1;
-        ResetSpawn();
-
+        if(collision.gameObject.tag == "Bee")
+        {
+            Debug.Log("Bee IN");
+            Main.S.numLives -= 1;
+            ResetSpawn();
+        }
+        
         //GameObject cloneBee = Instantiate(Bee, Bee.transform.position, Quaternion.identity);
         //Destroy(GameObject.FindWithTag("Bee"));
         //StartCoroutine(wait());
