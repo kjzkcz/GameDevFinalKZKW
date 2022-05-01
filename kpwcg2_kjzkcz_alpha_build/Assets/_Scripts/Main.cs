@@ -43,7 +43,7 @@ public class Main : MonoBehaviour
             remainingLivesTxt.text += " X";
         }
 
-        if(numLives <= 0||numBall==0)
+        if(numLives <= 0 || numBall == 0)
         {
             SceneManager.LoadScene("GameOver");
         }

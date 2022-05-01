@@ -7,6 +7,7 @@ TagManager:
   - Wall
   - Bee
   - Balloon
+  - Bomb
   layers:
   - Default
   - TransparentFX
