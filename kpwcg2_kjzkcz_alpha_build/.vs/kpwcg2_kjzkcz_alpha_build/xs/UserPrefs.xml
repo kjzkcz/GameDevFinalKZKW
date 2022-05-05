@@ -1,17 +1,19 @@
 ﻿<Properties StartupConfiguration="{DBB14FEB-21AB-5E47-F7A5-BB6F82161D42}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/LoadGame.cs">
     <Files>
-      <File FileName="Assets/_Scripts/Redzone.cs" Line="44" Column="5" />
+      <File FileName="Assets/_Scripts/Balloon.cs" Line="38" Column="45" />
+      <File FileName="Assets/_Scripts/Redzone.cs" />
       <File FileName="Assets/_Scripts/Player.cs" />
-      <File FileName="Assets/_Scripts/Balloon.cs" Line="33" Column="28" />
-      <File FileName="Assets/_Scripts/Main.cs" Line="86" Column="38" />
-      <File FileName="Assets/_Scripts/Bomb.cs" Line="33" Column="6" />
-      <File FileName="Assets/_Scripts/LoadGame.cs" Line="19" Column="26" />
+      <File FileName="Assets/_Scripts/Main.cs" Line="20" Column="15" />
+      <File FileName="Assets/_Scripts/Bomb.cs" />
+      <File FileName="Assets/_Scripts/Blink.cs" />
+      <File FileName="Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/GraphicRaycaster.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scripts/LoadGame.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7c84bea7-51e1-4814-b8cb-60a2b0cbd102" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5ecd1e01-ae78-4572-9258-abfeab3a6be9" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

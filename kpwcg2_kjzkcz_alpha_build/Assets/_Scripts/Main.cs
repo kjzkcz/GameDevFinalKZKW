@@ -14,28 +14,46 @@ public class Main : MonoBehaviour
 
     public Text remainingLivesTxt;
     public Text levelText;
+    public int level;
 
-    public int numLives;
+    private int maxLevel = 3;
+
+    //private int _level;
+
+    ////level property
+    //public int level
+    //{
+    //    get
+    //    {
+    //        return (_level);
+    //    }
+
+    //    set
+    //    {
+    //        _level = value;
+    //    }
+    //}
+
+    public int numLives = 3;
     public int numBall;
-    int level;
 
     public Text timeText;
-    public float timeRemaining = 240;
+    public float timeAllotted = 240;
+    private float timeRemaining;
     public bool timerIsRunning = false;
 
-    // Start is called before the first frame update
     private void Awake()
     {
         //GameObject Bee =Instantiate<GameObject>(BeeFab);
         //Bee.transform.position = this.transform.position;
     }
+
     void Start()
     {
         S = this;
-        numLives = 3;
-        level = 1;
+        timeRemaining = timeAllotted;
+        spawnButton.SetActive(true);
         numBall = GameObject.FindGameObjectsWithTag("Balloon").Length;
-        
     }
 
     // Update is called once per frame
@@ -53,7 +71,6 @@ public class Main : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
                 SceneManager.LoadScene("GameOver");
-
             }
         }
 
@@ -70,17 +87,33 @@ public class Main : MonoBehaviour
         {
             SceneManager.LoadScene("GameOver");
         }
-
-        if (numBall <= 0)
+        if (numBall == 0)
         {
-            SceneManager.LoadScene("NextLevel");
+            NextLevel();
         }
-
-
     }
+
+    void NextLevel()
+    {
+        level++;
+        // check if maxLevel reached
+        if (level <= maxLevel)
+        {
+            Debug.Log($"Level Up, current level: {level}");
+            SceneManager.LoadScene($"_Scene_{level - 1}");
+            numBall = GameObject.FindGameObjectsWithTag("Balloon").Length;
+        }
+        else
+        {
+            //max level reached, load win screen
+            SceneManager.LoadScene("YouWin");
+        }
+    }
+
 
     public void SpawnBee()
     {
+        //Debug.Log("Onlick called");
         timerIsRunning = true;
         Instantiate(BeeFab, sp.transform.position, Quaternion.identity);
         spawnButton.SetActive(false);

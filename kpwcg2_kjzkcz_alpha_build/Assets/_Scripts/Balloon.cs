@@ -31,8 +31,6 @@ public class Balloon : MonoBehaviour
             Debug.Log("Balloon Hit");
             Destroy(this.gameObject);
             Main.S.numBall -= 1;
-
-
         }
 
         //if (numBall= 0)
